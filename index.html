@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cheen</title>
+</head>
+<body>
+    <h1>Cheen Laboratorio</h1>
+    <main>
+        <!--Seccion para agregar medicamento-->
+        <section>
+            <div class="seccion-agregar-medicamento">
+                <h2>Agregar Medicamento</h2>
+                <form class="agregar-medicamento" action="#" onsubmit="nuevoMedicamento();return false" id="medicamentoNuevo">
+                    <label for="codigo">Codigo:</label>
+                    <input id="codigo" name="codigo" type="text" >
+        
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" id=""name="nombre" type="text" >
+        
+                    <label for="cantidad">Cantidad:</label>
+                    <input id="cantidad" name="cantidad" type="number" >
+        
+                    <label for="precio">Precio (Unitario):</label>
+                    <input id="precio" name="precio" type="number" >
+                    <button>Submit</button>
+                </form>
+            </div>
+        </section>
+        <!--Seccion para eliminar medicamento-->
+        <section>
+            <div class="seccion-eliminar-medicamento">
+                <h2>Eliminar Medicamento</h2>
+                <form class="buscar" action="#" onsubmit="eliminarMedicamento();return false" id="inputEliminar">
+                    <label for="eliminar">Eliminar:</label>
+                    <input id="eliminar" name="eliminar" type="text">
+                    <button class="eliminar-btn">Submit</button>
+                </form>
+            </div>
+        </section>
+        <!--Seccion para consultar medicamentos-->
+        <section>
+            <div class="seccion-lista-medicamentos">
+                <h2>Lista de Medicamentos</h2>
+                <form class="buscar" action="#" onsubmit="buscarMedicamento();return false" id="inputBuscar">
+                    <label for="buscar">Buscar:</label>
+                    <input id="buscar" name="buscar" type="text">
+                    <button>Submit</button>
+                </form>
+                <button class="ordenar" onclick="ordenar()">Ordenar</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Precio (Unitario)</th>
+                            <th>Monto Invertido</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaMedicamentos"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
