@@ -21,19 +21,19 @@ let nuevoMedicamento = () => {
             alert(`Ya existe un medicamento con el codigo ${codigo}`)
             return
         }
+
+        listaMedicamentos.push({
+            codigo,
+            nombre,
+            cantidad,
+            precioUnitario: precio,
+            montoInvertido: precio*cantidad
+    
+        })
     }
 
-    listaMedicamentos.push({
-        codigo,
-        nombre,
-        cantidad,
-        precioUnitario: precio,
-        montoInvertido: precio*cantidad
-
-    })
 
     formElement.reset()
-
     agregarListaMedicamentos()
 }
 
